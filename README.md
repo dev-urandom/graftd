@@ -1,15 +1,13 @@
-graftd
-======
+![get_on_this_level](https://i.minus.com/ibd7dgjN0UsxhZ.gif)
+# graftd
 
 A trivial example server using [graft](https://github.com/dev-urandom/graft)
 
-![get_on_this_level](https://i.minus.com/ibd7dgjN0UsxhZ.gif)
-
 ## Setup
 
-0. Clone
-1. Install dependences `go get`
-2. Build with `go build`
+0. `git clone https://github.com/dev-urandom/graftd.git`
+1. `go get`
+2. `go build`
 
 ## Usage
 
