@@ -4,6 +4,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"flag"
 	"net/http"
 
 	"github.com/dev-urandom/graft"
@@ -13,8 +14,13 @@ import (
 var logger *log.Logger
 
 func main() {
-	host := "localhost"
 	port := "7777"
+	flag.StringVar(&port, "port", "3333", "port")
+	host := "localhost"
+	flag.StringVar(&host, "host", "localhost", "host")
+
+	flag.Parse()
+
 	server := graft.New()
 	logger = log.New(os.Stdin, "["+host+":"+port+"] ", log.LstdFlags)
 
