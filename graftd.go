@@ -2,9 +2,8 @@ package main
 
 import (
 	"io"
-	"io/ioutil"
-	"net/http"
 	"log"
+	"net/http"
 
 	"github.com/dev-urandom/graft"
 	"github.com/bmizerany/pat"
@@ -14,11 +13,13 @@ import (
 func main() {
 	host := "localhost"
 	port := "7777"
-
 	server := graft.New()
-	fmt.Println("HELLO", server)
 
 	http.Handle("/", routes())
+
+	log.Println("Server State:", server.State)
+	log.Println("Listening on localhost:7777")
+
 	err := http.ListenAndServe(host+":"+port, nil)
 
 	if err != nil {
