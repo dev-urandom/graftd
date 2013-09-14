@@ -26,7 +26,7 @@ You can also use `./start.sh` which takes an optional cluster size (the default 
 Server status
 
 ```bash
-$ curl -X GET localhost:5000/status
+$ curl -X GET localhost:5000/status | python -mjson.tool
 # => 
 {
     "id": "localhost:5000",
